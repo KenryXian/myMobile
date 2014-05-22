@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wizMobile</title>
+    <link rel='stylesheet' href='/stylesheets/base.css'/>
+</head>
+<script>
+    function sublogin(){
+        var form = document.getElementById('loginFrom');
+        form.submit();
+    }
+
+</script>
+
+<body>
+<div class="login_box">
+    <form id="loginFrom" method="post">
+        <ul class="login_main">
+            <li style="color:red;text-align:center"> <%= errorMessage %></li>
+            <li><input name="name" type="text" class="name_input"/></li>
+            <li><input name="pwd" type="password" class="pass_input"/></li>
+            <li><a href="javascript:void(0)" class="login_btn" onclick="sublogin()">登 录</a></li>
+            <li>
+                <label>
+                    <input name="rem_me" type="checkbox" class="fare_radio"
+                           style="width:15px;height:16px;padding-left:0px;"/>
+                    <span style="font-size:14px;">记住我</span>
+                </label>
+            </li>
+        </ul>
+     </form>
+</div>
+</body>
+</html>
